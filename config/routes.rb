@@ -48,7 +48,9 @@ MyRailsApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  get 'ab_test/' => 'ab_test#index'
+  get 'ab_test/yes' => 'ab_test#yes'
+  get 'ab_test/no'  => 'ab_test#no'
 
   # See how all your routes lay out with "rake routes"
 
