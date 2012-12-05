@@ -1,11 +1,11 @@
 class AbTestController < ApplicationController
   def index
-    if fluidfeature("ab-test", { :version => "a" })
+    if ff? "ab-test", "a"
       # Our version "A" code here
       render :text => "Do you like Apples? <a href=\"yes\">YES</a> | <a href=\"no\">NO</a>"
       return
     end
-    if fluidfeature("ab-test", { :version => "b" })
+    if ff? "ab-test", "b"
       # Our version "B" code here
       render :text => "Do you like Bananas? <a href=\"yes\">YES</a> | <a href=\"no\">NO</a>"
       return

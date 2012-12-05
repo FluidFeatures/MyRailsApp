@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     nil
   end
 
-  def fluidfeature_current_user(verbose=false)
+  def fluidfeatures_current_user(verbose=false)
     current_user = get_current_user
     if current_user
       # logged in user
